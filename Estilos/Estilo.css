@@ -1,0 +1,13 @@
+.std{
+    background-color: white;
+    border-radius: 20px;
+}
+.selected{
+    background-color: aqua;
+}
+.no_show{
+    display: none;
+}
+header{
+    display:flex;
+}

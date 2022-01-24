@@ -10,7 +10,7 @@
 <body>
     <header>
         <div>
-            <a href="">Return</a> 
+            <button type="button" id="return">VOLTAR!</button>
         </div>
         <div>
             <h4>NOME</h4>
@@ -22,38 +22,42 @@
         </div>
     </header>
     <Main>
-        <h1>Jogo Das Bandeiras!</h1>
-        <Div>
-            <h2>Escolha seu jogo!</h2>
-            <ul>
-                <li><button type="button">JOGO DAS BANDEIRAS</button></li>
-                <li><button type="button">JOGO DAS CAPITAIS</button></li>
-                <li><button type="button">JOGO DAS BANDEIRAS INVERTIDO</button></li>
-            </ul>
-        </Div>
-        <div>
-            <h2>Escolha a dificuldade!</h2>
-            <ul>
-                <li><button type="button">Facil</button></li>
-                <li><button type="button">Medio</button></li>
-                <li><button type="button">Dificil</button></li>
-            </ul>
+        <div id="tela1" class="show">
+            <h1>Jogo Das Bandeiras!</h1>
+            <Div>
+                <h2>Escolha seu jogo!</h2>
+                <ul>
+                    <li><button type="button" id="bandeiras" class="std">JOGO DAS BANDEIRAS</button></li>
+                    <li><button type="button" id="capitais" class="std">JOGO DAS CAPITAIS</button></li>
+                    <li><button type="button" id="invertido" class="std">JOGO DAS BANDEIRAS INVERTIDO</button></li>
+                </ul>
+            </Div>
+            <div>
+                <h2>Escolha a dificuldade!</h2>
+                <ul>
+                <li><button type="button" id="facil" class="std">Facil</button></li>
+                <li><button type="button" id="medio" class="std">Medio</button></li>
+                <li><button type="button" id="dificil" class="std">Dificil</button></li>
+                </ul>
+            </div>
+            <div>
+                <button type="button" id="jogar">JOGAR!</button>
+            </div>
         </div>
-        <div>
-            <button type="button">JOGAR!</button>
-        </div>
-        <div>
-            <img src="" alt="" id="img1">
-        </div>
-        <div>
-            <Button type="Button" id="btn1"></Button>
-            <Button type="Button" id="btn2"></Button>
-        </div>
-        <div>
-            <Button type="Button" id="btn3"></Button>
-            <Button type="Button" id="btn4"></Button>
-        </div>
-        
+        <div id="tela2" class="no_show">
+            <div>
+                <p id="timer"></p>
+                <img src="https://raw.githubusercontent.com/vitor93gs/JogoDasBandeiras/main/imagens/albania.jpg" alt="Imagem da bandeira" id="img1">
+            </div>
+            <div>
+                <Button type="Button" id="btn1"></Button>
+                <Button type="Button" id="btn2"></Button>
+            </div>
+            <div>
+                <Button type="Button" id="btn3"></Button>
+                <Button type="Button" id="btn4"></Button>
+            </div>
+        </div>      
     </Main>
     <Footer>
 
