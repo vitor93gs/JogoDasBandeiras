@@ -11,3 +11,7 @@
 header{
     display:flex;
 }
+.imagem{
+    height: 250px;
+    width: 450px;
+}

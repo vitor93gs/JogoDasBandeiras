@@ -10,14 +10,14 @@
 <body>
     <header>
         <div>
-            <button type="button" id="return">VOLTAR!</button>
+            <button type="button" id="return">HOME</button>
         </div>
         <div>
             <h4>NOME</h4>
             <ul>
-                <li>recorde</li>
-                <li>tentativas</li>
-                <li>dificuldade</li>
+                <li>recorde <p id="recorde"></p></li>
+                <li>tentativas <p id="try"></p></li>
+                <li>dificuldade <p id="dificuldade"></p></li>
             </ul>
         </div>
     </header>
@@ -47,7 +47,7 @@
         <div id="tela2" class="no_show">
             <div>
                 <p id="timer"></p>
-                <img src="https://raw.githubusercontent.com/vitor93gs/JogoDasBandeiras/main/imagens/albania.jpg" alt="Imagem da bandeira" id="img1">
+                <img src="./Imagens/algeria.jpg" alt="Imagem da bandeira" id="img1" class="imagem">
             </div>
             <div>
                 <Button type="Button" id="btn1"></Button>
@@ -57,7 +57,18 @@
                 <Button type="Button" id="btn3"></Button>
                 <Button type="Button" id="btn4"></Button>
             </div>
-        </div>      
+            <div>
+                <h3>Vidas : </h3>
+                <p id="vidas">0</p>
+                <h3>Pontuacao : </h3>
+                <p id="pontuacao">0</p>
+            </div>
+            
+        </div>     
+        <div id="tela3" class="no_show">
+            <h1>PERDEU!</h1>
+            <button type="button" id="return2">Voltar!</button>
+        </div> 
     </Main>
     <Footer>
 
