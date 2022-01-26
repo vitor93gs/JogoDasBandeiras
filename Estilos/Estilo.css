@@ -1,3 +1,9 @@
+.timerDoJogo{
+    display:flex;
+    color: aqua;
+    font-size: 40px;
+    justify-content: space-around;
+}
 .std{
     background-color: white;
     border-radius: 20px;
@@ -31,6 +37,9 @@ header li{
 }
 .vermelho{
     background-color:red;
+}
+.verde{
+    background-color:green
 }
 .branco{
     background-color:white;
@@ -95,10 +104,9 @@ h1{
     display:flex;
     justify-content: center;
 }
-#timer{
-    display:flex;
-    color: aqua;
-    -webkit-text-stroke: 1px rgba(77, 143, 143, 0.63);
-    font-size: 30px;
-    justify-content: space-around;
+.timer_expirando{
+    color:red;
+}
+.timer_vazio{
+    color: transparent;
 }

@@ -126,12 +126,19 @@ function timer(){
     idTempo = setInterval(() => { 
         tempo --;
         timerDoJogo.innerText = tempo;
+        
         if(tempo === 0){
             clearInterval(idTempo);
             tempo = 500;
             termino();
             vidas = 3;
-        }    
+            timerDoJogo.classList.remove("timer_expirando")
+        }
+
+        else if(tempo === 150){
+            timerDoJogo.classList.add("timer_expirando")
+        }   
+
     }, 10);    
 }
 
@@ -140,12 +147,9 @@ function timer(){
 
 
 function termino(){
-    tela1.classList.remove("show");
     tela1.classList.add("no_show");
-    tela2.classList.remove("show");
     tela2.classList.add("no_show");
     tela3.classList.remove("no_show");
-    tela3.classList.add("show");
 }
 
 
@@ -157,95 +161,117 @@ O numero aleatorio deve servir de base para a escolha dos numeros, o total de nu
 function selecionarPaises(){
     const arrPaises = [];
     let tam = 1;
-    let numeroAlea = numAleatorio(tamDoArr)
-    arrPaises.push(arrJogo.splice(numeroAlea,1))
+    arrPaises.push(arrJogo.splice(numAleatorio(tamDoArr),1)[0]);
     
-    console.log(numeroAlea)
+    console.log(arrPaises)
 
     tamDoArr -= 1;
 
-    console.log(arrPaises[0][0])
     console.log(arrJogo)
     
-
-    while(tam<4){
-        
-        let numeroAlea2 = numAleatorio(tamDoArr-tam)
-        console.log(numeroAlea2)
-
-        let consolelog = arrJogo.splice(numeroAlea2,1)
-        arrPaises.push(consolelog);
-        arrJogo.push(consolelog)
-        console.log(consolelog)
-        tam++;
-    }
-
-    tam = 1;
+    let num1,num2,num3
+    num1 = numAleatorio(tamDoArr);
+    num2 = numAleatorio(tamDoArr);
+    num3 = numAleatorio(tamDoArr);
     
+    while(num1 === num3){
+        num1 = numAleatorio(tamDoArr);
+    }
+    while(num1 === num2){
+        num1 = numAleatorio(tamDoArr);
+    }
+    while(num3 === num2){
+        num2 = numAleatorio(tamDoArr);
+    }
+    console.log(num1,num2,num3)
+
+    arrPaises.push(arrJogo[num1])
+    arrPaises.push(arrJogo[num2])
+    arrPaises.push(arrJogo[num3])
+
+    console.log(arrPaises);
+
     return arrPaises
 }
 
 //funcao anti erro para bug do undefined
 
-function antiErro(arrErro){
-    if (arrErro[0][0].nome===undefined){
-        return arrErro[0];
-    }
-    return arrErro
-}
 
 // funcao que monta o tabuleiro
 
 function montar(arr){
-    img.src = `${arr[0][0].bandeira}`;
-    result = arr[0][0].nome;
-    
+    img.src = `${arr[0].bandeira}`;
+    result = arr[0].nome;
+    console.log(result)
     let bt1,bt2,bt3,bt4;
     
     bt1 = arr.splice(numAleatorio(4),1);
     bt2 = arr.splice(numAleatorio(3),1);
     bt3 = arr.splice(numAleatorio(2),1);
     bt4 = arr.splice(0,1);
-    
-    bt1 = antiErro(bt1);
-    bt2 = antiErro(bt2);
-    bt3 = antiErro(bt3);
-    bt4 = antiErro(bt4);
 
-    botao1.innerText = bt1[0][0].nome;
-    botao2.innerText = bt2[0][0].nome;
-    botao3.innerText = bt3[0][0].nome;
-    botao4.innerText = bt4[0][0].nome;
-    
-    botao1.classList.remove("vermelho");
-    botao2.classList.remove("vermelho");
-    botao3.classList.remove("vermelho");
-    botao4.classList.remove("vermelho")
-;
+    console.log(bt1)
+    console.log(bt2)
+    console.log(bt3)
+    console.log(bt4)
 
+    botao1.innerText = bt1[0].nome;
+    botao2.innerText = bt2[0].nome;
+    botao3.innerText = bt3[0].nome;
+    botao4.innerText = bt4[0].nome;
+    
+    botao1.classList.remove("vermelho","verde");
+    botao2.classList.remove("vermelho","verde");
+    botao3.classList.remove("vermelho","verde");
+    botao4.classList.remove("vermelho","verde");
 }
+
+
+//funcao montar pais selecionados
+
+
+function tabuleiro(){
+    timerDoJogo.classList.remove("timer_vazio");
+    timerDoJogo.classList.remove("timer_expirando");
+    montar(selecionarPaises());
+    tempo = 500;   
+}
+
 
 // funcao dos botoes de jogo
 
 
 function botaoJogo(botaox){
     if(botaox.innerText === result){
+
         pontos ++;
-        tempo = 500;
+        botaox.classList.add("verde")
+        timerDoJogo.classList.add("timer_vazio")
+        var audio = new Audio('../SONS/CERTO.mp3');
+        audio.play();
         pontuacao.innerText = `PONTUACAO: ${pontos}`
-        botao1.innerText = ""
-        botao2.innerText = ""
-        botao3.innerText = ""
-        botao4.innerText = ""
-        montar(selecionarPaises())
+        tempo = 300
+        setTimeout(tabuleiro,1000)
+        
     }
     else{
+
         vidas -= 1;
         numDeVidas.innerText = `VIDAS: ${vidas}`
         botaox.classList.add("vermelho")
+
+        if(vidas>0){
+            var audio = new Audio('../SONS/ERRADO.mp3');
+            audio.play();
+        }
+
     }
     if(vidas === 0){
+
+        var audio = new Audio('../SONS/DERROTA.mp3');
+            audio.play();
         termino()
+
     }
     
 }
@@ -254,10 +280,8 @@ function botaoJogo(botaox){
 
 function comecarJogo(){
     criarArrJogo()
-    tela1.classList.remove("show");
     tela1.classList.add("no_show");
     tela2.classList.remove("no_show");
-    tela2.classList.remove("show");
     timer()
     numDeVidas.innerText = `VIDAS : ${vidas}`
     montar(selecionarPaises())
@@ -280,12 +304,10 @@ function resetAll(){
     tentativas ++;
     tentativasHtml.innerText = `TENTATIVAS : ${tentativas}`;
     pontos = 0;
-    tela2.classList.remove("show");
     tela2.classList.add("no_show");
-    tela3.classList.remove("show");
     tela3.classList.add("no_show");
     tela1.classList.remove("no_show");
-    tela1.classList.add("show");
+  
     
 }
 
