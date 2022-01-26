@@ -9,9 +9,96 @@
     display: none;
 }
 header{
+    display: flex;
+    justify-content: space-between;
+}
+header li{
     display:flex;
+    color: aqua;
+    -webkit-text-stroke: 1px rgba(77, 143, 143, 0.63);
+    font-size: 30px;   
+    margin: 0px 5px 0px 5px;
+    padding: 0px;
+}
+.div2{
+    margin: 0px;
+    padding: 0px;
+    border:0px;
 }
 .imagem{
     height: 250px;
     width: 450px;
+}
+.vermelho{
+    background-color:red;
+}
+.branco{
+    background-color:white;
+}
+body{
+    background-image:url(../Imagens/Fundo2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1{
+    color: #2bdee4;
+    font-family: 'Trocchi', sans-serif;
+    font-size: 110px; 
+    font-weight: normal; 
+    margin: 80px 5px 80px 5px; 
+    -webkit-text-stroke: 2px black;
+    text-align: center;
+}
+
+.inGame{
+    display:flex;
+    color: aqua;
+    -webkit-text-stroke: 1px rgba(77, 143, 143, 0.63);
+    font-size: 30px;
+    justify-content: space-around;    
+}
+.div3{
+    display:flex;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+    margin: 30px;
+    justify-content: space-around;
+}
+.div4{
+    display:flex;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+    margin: 30px;
+    justify-content: space-around;
+}
+.btnJogo{
+    height: 50px;
+    width: 200px;
+    margin: 20px;
+    font-size: auto;
+    border-radius: 50px;
+}
+#tela1 div{
+    display:flex;
+    justify-content: center;
+}
+#tela2 div{
+    display:flex;
+    justify-content:center;
+
+    margin: 5px 40px 5px 40px;
+}
+#tela3 div{
+    display:flex;
+    justify-content: center;
+}
+#timer{
+    display:flex;
+    color: aqua;
+    -webkit-text-stroke: 1px rgba(77, 143, 143, 0.63);
+    font-size: 30px;
+    justify-content: space-around;
 }

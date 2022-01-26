@@ -12,19 +12,18 @@
         <div>
             <button type="button" id="return">HOME</button>
         </div>
-        <div>
-            <h4>NOME</h4>
+        <div class="div2">
             <ul>
-                <li>recorde <p id="recorde"></p></li>
-                <li>tentativas <p id="try"></p></li>
-                <li>dificuldade <p id="dificuldade"></p></li>
+                <li id="recorde">RECORDE : </li>
+                <li id="try">TENTATIVAS : </li>
+                <!--<li>dificuldade <p id="dificuldade"></p></li>-->
             </ul>
         </div>
     </header>
     <Main>
         <div id="tela1" class="show">
-            <h1>Jogo Das Bandeiras!</h1>
-            <Div>
+            <h1>QUE PAÍS É ESSE?</h1>
+            <!--<Div>
                 <h2>Escolha seu jogo!</h2>
                 <ul>
                     <li><button type="button" id="bandeiras" class="std">JOGO DAS BANDEIRAS</button></li>
@@ -39,35 +38,39 @@
                 <li><button type="button" id="medio" class="std">Medio</button></li>
                 <li><button type="button" id="dificil" class="std">Dificil</button></li>
                 </ul>
-            </div>
+            </div>-->
             <div>
-                <button type="button" id="jogar">JOGAR!</button>
+                <button type="button" id="jogar" class="btnJogo">JOGAR!</button>
             </div>
         </div>
         <div id="tela2" class="no_show">
+            <h2 id="timer"></h2>
             <div>
-                <p id="timer"></p>
                 <img src="./Imagens/algeria.jpg" alt="Imagem da bandeira" id="img1" class="imagem">
             </div>
-            <div>
-                <Button type="Button" id="btn1"></Button>
-                <Button type="Button" id="btn2"></Button>
+            <div class="div3">
+                <Button type="Button" id="btn1" class="btnJogo"></Button>
+                <Button type="Button" id="btn2" class="btnJogo"></Button>
             </div>
-            <div>
-                <Button type="Button" id="btn3"></Button>
-                <Button type="Button" id="btn4"></Button>
+            <div class="div4">
+                <Button type="Button" id="btn3" class="btnJogo"></Button>
+                <Button type="Button" id="btn4" class="btnJogo"></Button>
             </div>
-            <div>
-                <h3>Vidas : </h3>
-                <p id="vidas">0</p>
-                <h3>Pontuacao : </h3>
-                <p id="pontuacao">0</p>
+            <div class="inGame">
+                <div>
+                    <h3 id="vidas">Vidas : 3</h3>
+                </div>
+                <div>
+                    <h3 id="pontuacao">Pontuacao : 0</h3>
+                </div>
             </div>
             
         </div>     
         <div id="tela3" class="no_show">
             <h1>PERDEU!</h1>
-            <button type="button" id="return2">Voltar!</button>
+            <div>
+                <button type="button" id="return2" class="btnJogo">Voltar!</button>
+            </div>
         </div> 
     </Main>
     <Footer>
