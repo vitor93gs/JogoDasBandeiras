@@ -10,12 +10,12 @@
 <body>
     <header>
         <div>
-            <button type="button" id="return">HOME</button>
+            <a href="./Index.html" class="button2">HOME</a>
         </div>
         <div class="div2">
             <ul>
-                <li id="recorde">RECORDE : </li>
-                <li id="try">TENTATIVAS : </li>
+                <!-- <li id="recorde">RECORDE : </li>
+                <li id="try">TENTATIVAS : </li> -->
                 <!--<li>dificuldade <p id="dificuldade"></p></li>-->
             </ul>
         </div>
@@ -23,22 +23,21 @@
     <Main>
         <div id="tela1" class="show">
             <h1>QUE PAÍS É ESSE?</h1>
-            <!--<Div>
+            <Div>
                 <h2>Escolha seu jogo!</h2>
                 <ul>
                     <li><button type="button" id="bandeiras" class="std">JOGO DAS BANDEIRAS</button></li>
-                    <li><button type="button" id="capitais" class="std">JOGO DAS CAPITAIS</button></li>
+                    <!--<li><button type="button" id="capitais" class="std">JOGO DAS CAPITAIS</button></li>-->
                     <li><button type="button" id="invertido" class="std">JOGO DAS BANDEIRAS INVERTIDO</button></li>
                 </ul>
             </Div>
+            <h2>Escolha a dificuldade!</h2>
             <div>
-                <h2>Escolha a dificuldade!</h2>
-                <ul>
                 <li><button type="button" id="facil" class="std">Facil</button></li>
                 <li><button type="button" id="medio" class="std">Medio</button></li>
                 <li><button type="button" id="dificil" class="std">Dificil</button></li>
                 </ul>
-            </div>-->
+            </div>
             <div>
                 <button type="button" id="jogar" class="btnJogo">JOGAR!</button>
             </div>
@@ -46,15 +45,14 @@
         <div id="tela2" class="no_show">
             <h2 id="timer" class="timerDoJogo"></h2>
             <div>
-                <img src="./Imagens/algeria.jpg" alt="Imagem da bandeira" id="img1" class="imagem">
-            </div>
+                <button class="botao_resposta" id="botaoResposta"><img src="" alt="Imagem da bandeira" id="img1" class="imagem"> </button>            </div>
             <div class="div3">
-                <Button type="Button" id="btn1" class="btnJogo"></Button>
-                <Button type="Button" id="btn2" class="btnJogo"></Button>
+                <Button type="Button" id="btn1" class="btnJogo"><img src="" alt="" id="imgBtn1" class="imagem2"></Button>
+                <Button type="Button" id="btn2" class="btnJogo"><img src="" alt="" id="imgBtn2" class="imagem2"></Button>
             </div>
             <div class="div4">
-                <Button type="Button" id="btn3" class="btnJogo"></Button>
-                <Button type="Button" id="btn4" class="btnJogo"></Button>
+                <Button type="Button" id="btn3" class="btnJogo"><img src="" alt="" id="imgBtn3" class="imagem2"></Button>
+                <Button type="Button" id="btn4" class="btnJogo"><img src="" alt="" id="imgBtn4" class="imagem2"></Button>
             </div>
             <div class="inGame">
                 <div>
@@ -69,8 +67,12 @@
         <div id="tela3" class="no_show">
             <h1>PERDEU!</h1>
             <div>
-                <button type="button" id="return2" class="btnJogo">Voltar!</button>
+                <a href="./Index.html" class="button2">VOLTAR</a>
+                <!-- <button type="button" id="return2" class="btnJogo">Voltar!</button> -->
             </div>
+        </div>
+        <div id="tela4" class="no_show">
+            <h1>Parabens, voce acertou todos os paises dessa dificuldade!</h1>
         </div> 
     </Main>
     <Footer>

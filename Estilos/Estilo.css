@@ -5,11 +5,14 @@
     justify-content: space-around;
 }
 .std{
-    background-color: white;
-    border-radius: 20px;
+    height: 50px;
+    width: 100px;
+    margin: 3px;
+    font-size: auto;
+    border-radius: 50px;
 }
 .selected{
-    background-color: aqua;
+    background-color: green;
 }
 .no_show{
     display: none;
@@ -84,8 +87,8 @@ h1{
     justify-content: space-around;
 }
 .btnJogo{
-    height: 50px;
-    width: 200px;
+    height: 65px;
+    width: 215px;
     margin: 20px;
     font-size: auto;
     border-radius: 50px;
@@ -109,4 +112,38 @@ h1{
 }
 .timer_vazio{
     color: transparent;
+    -webkit-text-stroke: 1px transparent;
+}
+h2{
+    color: #2bdee4;
+    font-family: 'Trocchi', sans-serif;
+    font-size: 30px; 
+    font-weight: normal; 
+    margin: 10px 5px 10px 5px; 
+    -webkit-text-stroke: 1px black;
+    text-align: center;
+}
+.botao_resposta{
+    color: #2bdee4;
+    font-size: 80px; 
+    -webkit-text-stroke: 1px black;
+    text-align: center;
+    background-color: transparent;
+}
+.imagem2{
+    height: 50px;
+    width: 200px;
+    margin: 0px;
+    padding:0px;
+    border:0px;
+    border-radius: 50px;
+}
+.button2{
+    background-color:white;
+    color:black;
+    text-decoration: none;
+    font-size: auto;
+    border-radius: 50px;
+    border:1px black;
+    padding: 5px 30px 5px 30px;
 }
