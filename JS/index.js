@@ -222,7 +222,6 @@ function montar(arr,tipo){
     if(tipo===0){
         img.src = `${arr[0].bandeira}`;
         result = arr[0].nome;
-        console.log(result)
         let bt1,bt2,bt3,bt4;
     
         botao1.classList.remove("vermelho","verde","no_show");
@@ -258,17 +257,13 @@ function montar(arr,tipo){
             botao3.innerText = bt3[0].nome;
             botao4.innerText = bt4[0].nome;
         }
-        console.log(typeof botao1.lastChild.src)
-        console.log(typeof botao2.lastChild.src)
-        console.log(typeof botao3.lastChild.src)
-        console.log(typeof botao4.lastChild.src)
-        
     }
     
     else if(tipo===1){
         botaoResposta.innerText = arr[0].nome;
         result = arr[0].bandeira;
         console.log(result)
+        console.log(botao1.lastChild.src)
         
         let bt1,bt2,bt3,bt4;
     
@@ -304,11 +299,6 @@ function montar(arr,tipo){
             btnJogo2.src = bt2[0].bandeira;
             btnJogo3.src = bt3[0].bandeira;
             btnJogo4.src = bt4[0].bandeira;
-            console.log(botao1.innerHTML)
-            console.log(botao2.innerHTML)
-            console.log(botao3.innerHTML)
-            console.log(botao4.innerHTML)
-            console.log(botao1.lastChild.src.replace("http://127.0.0.1:5500","."))
         }
     }
     
