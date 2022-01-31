@@ -263,7 +263,7 @@ function montar(arr,tipo){
         botaoResposta.innerText = arr[0].nome;
         result = arr[0].bandeira;
         console.log(result)
-        console.log(botao1.lastChild.src)
+        
         
         let bt1,bt2,bt3,bt4;
     
@@ -300,6 +300,7 @@ function montar(arr,tipo){
             btnJogo3.src = bt3[0].bandeira;
             btnJogo4.src = bt4[0].bandeira;
         }
+        console.log(botao1.lastChild.src)
     }
     
     
