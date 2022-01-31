@@ -325,6 +325,7 @@ function tabuleiro(){
 // botaox.innerText === result
 
 function botaoJogo(botaox){
+    console.log(botao1.lastChild.src)
     if(botaox.innerText === result){
 
         pontos ++;
