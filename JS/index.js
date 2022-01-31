@@ -347,7 +347,7 @@ function botaoJogo(botaox){
         }    
     }
     else if(typeof botao1.lastChild.src !== "undefined"){
-        if(botaox.lastChild.src.replace("http://127.0.0.1:5500",".") === result){
+        if(botaox.lastChild.src.replace("https://vitor93gs.github.io/JogoDasBandeiras",".") === result){
             pontos ++;
             botaox.classList.add("verde")
             timerDoJogo.classList.add("timer_vazio")
